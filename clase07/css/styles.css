@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.header{
+    background-color: aliceblue;
+    color: tomato;
+    padding: 0.5em 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 30%;
+    align-self: auto;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li{
+    padding: 1em;
+    display: block;
+}
+
+.bannertop{
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+#contenedor img{
+    width: 100%;
+}
+
+.primero{
+    background-color: red;
+    width: 38%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.segundo{
+    background-color: rgb(72, 208, 212);
+    width: 38%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.tercero{
+    background-color: rgb(145, 236, 103);
+    width: 38%;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+.footer{
+    margin-top: 4em;
+    border-top: 5px solid white;
+    padding: 2em 3em;
+    background-color: brown;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.data{
+    background-color: aliceblue;
+    padding: 2em;
+    color: black;
+    border-radius: 15px;
+}
+
+.data ul li{
+    list-style-type: none;
+}
+
+.map{
+    width: 60%;
+}
+
+@media screen and (min-width: 990px) and (max-width: 1200px){
+    body{
+        background-color: tomato;
+    }
+}
+
+@media screen and (min-width: 660px) and (max-width: 989px){
+    body{
+        background-color: yellow;
+    }
+
+    .header{
+        flex-wrap: wrap;
+    }
+
+    
+    .logo{
+        width: 100%;
+        text-align: center;
+    }
+    navbar ul li{
+        text-align: center;
+    }
+
+    .bannertop{
+        display: none;
+    }
+
+    .primero{
+        width: 100%;
+    }
+
+    .segundo, .tercero{
+        width: 50%;
+        padding: 2em;
+    }
+
+    #contenedor article h2{
+        font-size: 2.2em;
+        margin: 1em;
+    }
+
+    #contenedor article p{
+        font-size: 1.5em;
+        margin: 0.5em;
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 659px){
+    body{
+        background-color: green;
+        }
+
+    header{
+        flex-wrap: wrap;
+    }
+
+    .bannertop{
+        display: none;
+    }
+    
+    navbar ul li{
+        text-align: center;
+    }
+
+    .primero, .segundo, .tercero{
+        width: 100%;
+    }
+
+    .navbar ul{
+        flex-direction: row-reverse;
+    }
+
+}
