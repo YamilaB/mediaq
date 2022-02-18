@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 85vw;
+    background-color: blueviolet;
+}
+
+
+.header{
+    text-align: center;
+    text-decoration-style: solid;
+    color: rgb(247, 246, 248);
+    background-color: rgb(55, 36, 73);
+    
+}
+
+#barraNav{
+    display: flex;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(236, 236, 247);
+}
+#dropdownMenuButton1{
+    background-color: aquamarine;
+    text-decoration: none;
+    border: none;
+}
+
+#dropdownMenuButton2{
+    background-color: rgb(137, 112, 226);
+    text-decoration: none;
+    border: none;
+}
+
+#dropdownMenuButton3{
+    background-color: rgb(226, 112, 211);
+    text-decoration: none;
+    border: none;
+}
+
+#dropdownMenuButton4{
+    background-color: rgb(112, 226, 226);
+    text-decoration: none;
+    border: none;
+}
+
+#dropdownMenuButton5{
+    background-color: rgb(10, 2, 41);
+    text-decoration: none;
+    border: none;
+}
+
+#mainContent{
+    width: 85vw;
+    height: 70%;
+    background-color: blueviolet;
+}
+.ofertas{
+    color: white;
+    float: left;
+    width: 50%;
+    background-color: rgb(18, 2, 48)
+}
+.carousel-inner{
+    width: 30%;
+    display: flex;
+    float: left;
+    background-color: rgba(156, 247, 247, 0.781);
+}
+
+#carrito{
+    background-color: black;
+    color: aliceblue;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 90px;
+}
+footer{
+    clear: both;
+    background-color: rgb(168, 168, 247);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .dropdown-menu#{$infix}-start {
+        --bs-position: start;
+
+        &[data-bs-popper] {
+        right: auto;
+        left: 0;
+        }
+    }
+
+    .dropdown-menu#{$infix}-end {
+        --bs-position: end;
+
+        &[data-bs-popper] {
+        right: 0;
+        left: auto;
+        }
+    }
+    }
+}
+Should you modify your $grid-breakpoints, your changes will apply to all the loops iterating over that map.
+
+Copy
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
